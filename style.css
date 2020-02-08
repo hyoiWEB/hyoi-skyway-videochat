@@ -29,14 +29,12 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 }
 
 #my-video {
-  margin-top: 15px;
   width: 375px;
   height: 750px;
   background-color: #eee;
 }
 
 .remoteVideos {
-  position: -webkit-sticky;
   width: 750px;
   height: 750px;
   background-color: #eee;
