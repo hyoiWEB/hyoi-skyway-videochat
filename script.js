@@ -36,7 +36,7 @@ $(function() {
   });
 
   $('#end-call').on('click', () => {
-    $('#chatbox-'+room.name).hide() // 切断時にチャットボックスを隠す
+    $('#chatbox-'+room.name).show() // 切断時にチャットボックスを隠す
     room.close();
     step2();
   });
@@ -116,7 +116,7 @@ $(function() {
 
   function step2() {
     $('#their-videos').empty();
-    $('#step1, #step3').hide();
+    $('#step1, #step3').show();
     $('#step2').show();
     $('#join-room').focus();
   }
@@ -179,7 +179,7 @@ $(function() {
     room.on('peerLeave', peerId => {
       $('.video_' + peerId).remove();
     });
-    $('#step1, #step2').hide();
+    $('#step1, #step2').show();
     $('#step3').show();
   }
 });
