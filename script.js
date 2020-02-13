@@ -35,11 +35,6 @@ $(function() {
     step3(room);
   });
 
-  $('#end-call').on('click', () => {
-    $('#chatbox-'+room.name).hide() // 切断時にチャットボックスを隠す
-    room.close();
-    step2();
-  });
 
   // Retry if getUserMedia fails
   $('#step1-retry').on('click', () => {
