@@ -36,7 +36,7 @@ $(function() {
   });
 
   $('#end-call').on('click', () => {
-    $(room.name).hide() // 切断時にチャットボックスを隠す
+    $('#chatbox-'+room.name).hide() // 切断時にチャットボックスを隠す
     room.close();
     step2();
   });
