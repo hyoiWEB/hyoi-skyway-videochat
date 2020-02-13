@@ -161,8 +161,7 @@ $(function() {
 
       $('#their-videos').append($(
         '<div class="video_' + peerId +'" id="' + id + '">' +
-          '<label>' + stream.peerId + ':' + stream.id + '</label>' +
-          '<video class="#remote-Video" autoplay playsinline>' +
+          '<video class="remote-Video" autoplay playsinline>' +
         '</div>'));
       const el = $('#' + id).find('video').get(0);
       el.srcObject = stream;
