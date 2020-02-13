@@ -1,7 +1,28 @@
+#my-video {
+  width: 375px;
+  height: 750px;
+  background-color: #eee;
+}
+
+.remoteVideos {
+  width: 750px;
+  height: 750px;
+  background-color: #eee;
+}
+
+#video-container {
+  padding: 25px;
+  text-align: center;
+}
+
+#my-id {
+  font-weight: bold;
+}
+
 .chatbox {
   float: left;
-  height: 300px;
-  width: 90%;
+  height: 750px;
+  width: 375px;
   overflow: scroll;
   background-color: #EEE;
   padding: 10px;
