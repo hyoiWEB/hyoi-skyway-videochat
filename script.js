@@ -136,7 +136,7 @@ $(function() {
       const msg = $('#mymessage').val();
       // ルームに送って自分のところにも反映
       room.send(msg);
-      messages.prepend('<div><span class="you">You: </span>' + msg + '</div>');
+      messages.prepend('<div><span class="you">あなた: </span>' + msg + '</div>');
       $('#mymessage').val('');
     });
 
@@ -147,11 +147,11 @@ $(function() {
     });
 
     room.on('peerJoin', peerId => {
-      messages.prepend('<div><span class="peer">' + peerId.substr(0,8) + '</span>: has joined the room </div>');
+      messages.prepend('<div><span class="peer">' + peerId.substr(0,8) + '</span>: このルームに参加しました。</div>');
     });
 
     room.on('peerLeave', peerId => {
-      messages.prepend('<div><span class="peer">' + peerId.substr(0,8) + '</span>: has left the room </div>');
+      messages.prepend('<div><span class="peer">' + peerId.substr(0,8) + '</span>: このルームから退出しました。</div>');
     });
 
     // streamが飛んできたら相手の画面を追加する
