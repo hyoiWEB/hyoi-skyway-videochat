@@ -125,7 +125,7 @@ $(function() {
     // chatboxを追加する
     const chatbox = $('<div></div>').addClass('chatbox').attr('id', 'chatbox-'+room.name);
     const header = $('<h4></h4>').html('Room: <strong>' + room.name + '</strong>');
-    const messages = $('<div><em>Peer connected.</em></div>').addClass('messages');
+    const messages = $('<div><em></em></div>').addClass('messages');
     chatbox.append(header);
     chatbox.append(messages);
     $('#chatframe').append(chatbox);
