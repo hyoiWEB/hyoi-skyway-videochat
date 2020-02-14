@@ -116,7 +116,6 @@ $(function() {
 
   function step2() {
     $('#their-videos').empty();
-    $('#video-container').append('<video id="remote-video" muted="true" autoplay playsinline></video>');
     $('#step1, #step3').hide();
     $('#step2').show();
     $('#join-room').focus();
@@ -178,6 +177,7 @@ $(function() {
     room.on('close', step2);
     room.on('peerLeave', peerId => {
       $('.video_' + peerId).remove();
+      $('#video-container').append('<video id="remote-video" muted="true" autoplay playsinline></video>');
     });
     $('#step1, #step2').hide();
     $('#step3').show();
