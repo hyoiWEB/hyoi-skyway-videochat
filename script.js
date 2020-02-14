@@ -161,7 +161,7 @@ $(function() {
       $('#remote-video').remove();
       $('#their-videos').append($(
         '<div class="video_' + peerId +'" id="' + id + '">' +
-          '<video class="remote-Video" autoplay playsinline>' +
+          '<video class="remote-video" autoplay playsinline>' +
         '</div>'));
       const el = $('#' + id).find('video').get(0);
       el.srcObject = stream;
