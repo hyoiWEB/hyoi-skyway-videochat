@@ -38,6 +38,7 @@ $(function() {
   $('#end-call').on('click', () => {
     $('#chatbox-'+room.name).hide() // 切断時にチャットボックスを隠す
     room.close();
+    $('#video-container').append('<video id="remote-video" muted="true" autoplay playsinline></video>');
     step2();
   });
 
