@@ -38,7 +38,6 @@ $(function() {
   $('#end-call').on('click', () => {
     $('#chatbox-'+room.name).hide() // 切断時にチャットボックスを隠す
     room.close();
-    $('#video-container').append('<video id="remote-video" muted="true" autoplay playsinline></video>');
     step2();
   });
 
@@ -117,6 +116,7 @@ $(function() {
 
   function step2() {
     $('#their-videos').empty();
+    $('#video-container').append('<video id="remote-video" muted="true" autoplay playsinline></video>');
     $('#step1, #step3').hide();
     $('#step2').show();
     $('#join-room').focus();
