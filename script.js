@@ -158,7 +158,7 @@ $(function() {
     room.on('stream', stream => {
       const peerId = stream.peerId;
       const id = 'video_' + peerId + '_' + stream.id.replace('{', '').replace('}', '');
-      $('#their-videos').empty();
+      $('#remote-video').remove();
       $('#their-videos').append($(
         '<div class="video_' + peerId +'" id="' + id + '">' +
           '<video class="remote-Video" autoplay playsinline>' +
