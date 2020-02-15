@@ -178,8 +178,8 @@ $(function() {
     room.on('peerLeave', peerId => {
       $('.video_' + peerId).remove();
       $('#my-video').remove();
-      $('#video-container').append('<video id="remote-video" muted="true" autoplay playsinline></video>');
-      $('#video-container').append('<video id="my-video" muted="true" autoplay playsinline></video>');
+      $('#video-container').append('<video id="remote-video" muted="true" autoplay playsinline></video>'+
+      '<video id="my-video" muted="true" autoplay playsinline></video>');
     $('#step1, #step2').hide();
     $('#step3').show();
   }
