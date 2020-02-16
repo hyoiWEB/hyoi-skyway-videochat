@@ -42,9 +42,11 @@
   font-weight: bold;
 }
 
-
-.chatbox {
+.chatframe{
   display: inline-block;
+}
+.chatbox {
+  float: left;
   height: 50%;
   width: 50%;
   overflow: scroll;
