@@ -47,7 +47,6 @@
 }
 
 .chatbox {
-  float: right;
   height: 50%;
   width: 45%;
   overflow: scroll;
