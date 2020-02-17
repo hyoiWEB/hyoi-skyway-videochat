@@ -20,7 +20,6 @@
 }
 
 #my-video {
-  display:　inline-block;
   width: 50%;
   height: 50%;
   background-color: #eee;
@@ -42,11 +41,8 @@
   font-weight: bold;
 }
 
-.chatframe{
-  display: inline-block;
-}
 .chatbox {
-  float: left;
+  float: right;
   height: 50%;
   width: 50%;
   overflow: scroll;
