@@ -19,7 +19,7 @@
   background: rgb(66, 184, 221); /* this is a light blue */
 }
 
-#frex {
+#video-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
