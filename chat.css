@@ -19,6 +19,11 @@
   background: rgb(66, 184, 221); /* this is a light blue */
 }
 
+#step3 {
+  display: inline-block;
+}
+
+
 #my-video {
   width: 50%;
   height: 50%;
