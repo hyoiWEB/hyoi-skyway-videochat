@@ -20,7 +20,9 @@
 }
 
 #step3 {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 
