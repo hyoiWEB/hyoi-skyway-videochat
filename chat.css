@@ -25,7 +25,7 @@
 
 
 #my-video {
-  width: 50%;
+  width: 45%;
   height: 50%;
   background-color: #eee;
 }
@@ -49,7 +49,7 @@
 .chatbox {
   float: right;
   height: 50%;
-  width: 50%;
+  width: 45%;
   overflow: scroll;
   background-color: #EEE;
   padding: 10px;
