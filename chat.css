@@ -20,7 +20,7 @@
 }
 
 #video-container {
-  width: 100%;
+  width: auto;
   height: 600px;
   display: flex;
   flex-direction: row;
@@ -35,13 +35,15 @@
 }
 
 #remote-video {
-  width: 100%;
+  width: auto;
   height: 300px;
+  margin: 0 auto;
 }
 
 .remote-video {
-  width: 100%;
+  width: auto;
   height: 300px;
+  margin: 0 auto;
 }
 
 #my-id {
