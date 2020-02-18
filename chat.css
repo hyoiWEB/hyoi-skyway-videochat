@@ -27,19 +27,19 @@
 
 
 #my-video {
-  width: 360px;
+  width: 50%;
   height: 360px;
   background-color: #eee;
 }
 
 #remote-video {
-  width: 720px;
+  width: 100%;
   height: 480px;
   background-color: #eee;
 }
 
 .remote-video {
-  width: 720px;
+  width: 100%;
   height: 480px;
   background-color: #eee;
 }
@@ -49,7 +49,7 @@
 }
 #chatframe {
   height: 360px;
-  width: 360px;
+  width: 50%;
 }
 .chatbox {
   overflow: scroll;
