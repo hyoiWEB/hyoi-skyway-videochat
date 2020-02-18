@@ -51,30 +51,34 @@
   width: 50%;
   height: 360px;
   position: relative;
+  background-color: #eee;
 }
 
 #sendtextform {
   width: 100%;
   height: auto;
   margin: 0px;
-  padding: 5px;
-  background-color: #eee;
   position: absolute;
 	bottom: 0;
 }
 
 #mymessage {
-  width: 88%;
+  width: 86%;
   height: auto;
+  margin: 3px;
 }
 
 #sendbutton {
   float:right;
+  margin-left: 0px;
+  margin-right: 3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 .chatbox {
   width: auto;
-  height: auto;
+  height: 350px;
   overflow: scroll;
   background-color: #EEE;
   padding: 10px;
