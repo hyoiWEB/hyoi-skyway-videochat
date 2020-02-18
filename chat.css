@@ -48,10 +48,22 @@
   font-weight: bold;
 }
 #chatframe {
-  height: 360px;
   width: 50%;
+  height: 360px;
 }
+
+#sendtextform {
+  width: 100%;
+  height: auto;
+}
+
+#mymessage {
+  width: 88%;
+  height: auto;
+}
+
 .chatbox {
+  width: auto;
   height: 300px;
   overflow: scroll;
   background-color: #EEE;
