@@ -73,14 +73,14 @@
   height: auto;
   float:right;
   margin-left: 0px;
-  margin-right: 3px;
+  margin-right: 5px;
   margin-top: 3px;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 
 .chatbox {
   width: auto;
-  height: 250px;
+  height: 240px;
   overflow: scroll;
   background-color: #EEE;
   padding: 10px;
