@@ -128,7 +128,7 @@ $(function() {
     const messages = $('<div><em></em></div>').addClass('messages');
     chatbox.append(header);
     chatbox.append(messages);
-    $('#chatframe').append(chatbox);
+    $('#chatframe').prepend(chatbox);
 
     // メッセージ送信部分
     $('#sendtextform').on('submit', e => {
