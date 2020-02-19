@@ -26,6 +26,12 @@
   background-color: #eee;
 }
 
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 #my-video {
   float: left;
   width: 50%;
