@@ -77,7 +77,7 @@
 }
 
 .chatbox {
-  width: auto;
+  width: 50%;
   height: 290px;
   overflow: scroll;
   background-color: #EEE;
