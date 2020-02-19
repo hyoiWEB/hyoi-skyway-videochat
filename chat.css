@@ -26,19 +26,9 @@
   background-color: #eee;
 }
 
-#my-video,#chatframe {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
 #my-video {
+  float: left;
   width: 50%;
-  height: 350px;
-}
-
-#remote-video {
-  width: 100%;
   height: 350px;
 }
 
