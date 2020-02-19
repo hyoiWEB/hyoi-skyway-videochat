@@ -177,7 +177,7 @@ $(function() {
     room.on('close', step2);
     room.on('peerLeave', peerId => {
       $('.video_' + peerId).remove();
-      $('#video-container').prepend('<video id="remote-video" muted="true" autoplay playsinline></video>');
+      $('#video-container').prepend('<video class="remote-video "id="remote-video" muted="true" autoplay playsinline></video>');
     });
     $('#step1, #step2').hide();
     $('#step3').show();
