@@ -19,101 +19,15 @@
   background: rgb(66, 184, 221); /* this is a light blue */
 }
 
-/*スマホ用*/
-@media screen and (max-width: 480px) { /*ウィンドウ幅が最大479pxまでの場合に適用*/
-
-  .header {
-    background-image: url("header.png");
-    background-size: cover;
-    background-position: center;
-  }
-
-  #video-container {
-    width: 100%;
-    height: 700px;
-    background-color: #eee;
-    background-image: url("videoback.png");
-    background-size: cover;
-    background-position: center;
-  }
-
-  .flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  #my-video {
-    float: left;
-    width: 50%;
-    height: 350px;
-    object-fit: cover;
-  }
-
-  .remote-video {
-    width: 100%;
-    height: 350px;
-  }
-
-  #my-id {
-    font-weight: bold;
-  }
-  #chatframe {
-    width: 50%;
-    height: 350px;
-    position: relative;
-  }
-
-  #sendtextform {
-    width: 100%;
-    height: auto;
-    margin: 0px;
-    position: absolute;
-  	bottom: 0;
-  }
-
-  #mymessage {
-    width: 70%;
-    height: auto;
-    margin: 3px;
-  }
-
-  #sendbutton {
-    width: auto;
-    height: auto;
-    float:right;
-    margin-left: 0px;
-    margin-right: 5px;
-    margin-top: 3px;
-    margin-bottom: 5px;
-  }
-
-  .chatbox {
-    width: 100%;
-    height: 290px;
-    overflow: scroll;
-    background-color: #ffffff;
-    padding: 10px;
-    border: 1px solid #777;
-  }
-}
-
-
-
-/*PC・その他*/
-.header {
-  background-image: url("header.png");
-  background-size: cover;
-  background-position: center;
+.pure-g {
+background-image: url("background.png");
+background-size: cover;
+background-position: center;
 }
 
 #video-container {
   width: 100%;
   height: 700px;
-  background-color: #eee;
-  background-image: url("videoback.png");
-  background-size: cover;
-  background-position: center;
 }
 
 .flex {
@@ -183,4 +97,73 @@
 .you {
   color: #0C6BA1;
   font-weight: 600;
+}
+
+/*スマホ用*/
+@media screen and (max-width: 480px) { /*ウィンドウ幅が最大479pxまでの場合に適用*/
+
+  #video-container {
+    width: 100%;
+    height: 700px;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #my-video {
+    float: left;
+    width: 50%;
+    height: 350px;
+    object-fit: cover;
+  }
+
+  .remote-video {
+    width: 100%;
+    height: 350px;
+  }
+
+  #my-id {
+    font-weight: bold;
+  }
+  #chatframe {
+    width: 50%;
+    height: 350px;
+    position: relative;
+  }
+
+  #sendtextform {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    position: absolute;
+  	bottom: 0;
+  }
+
+  #mymessage {
+    width: 70%;
+    height: auto;
+    margin: 3px;
+  }
+
+  #sendbutton {
+    width: auto;
+    height: auto;
+    float:right;
+    margin-left: 0px;
+    margin-right: 5px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+  }
+
+  .chatbox {
+    width: 100%;
+    height: 290px;
+    overflow: scroll;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #777;
+  }
 }
