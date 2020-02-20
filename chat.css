@@ -33,19 +33,11 @@
     flex-wrap: wrap;
   }
 
-video {
-    -o-object-fit: contain;
-       object-fit: contain;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-  }
-
   #my-video {
     float: left;
     width: 50%;
     height: 350px;
+    object-fit: cover;
   }
 
   .remote-video {
@@ -111,19 +103,11 @@ video {
   flex-wrap: wrap;
 }
 
-video {
-    -o-object-fit: contain;
-       object-fit: contain;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-  }
-
 #my-video {
   float: left;
   width: 50%;
   height: 350px;
+  object-fit: cover;
 }
 
 .remote-video {
