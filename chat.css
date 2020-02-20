@@ -45,6 +45,7 @@
     height: 350px;
     background-image: url("videoback.png");
     background-size: cover;
+    background-position: center; 
   }
 
   #my-id {
@@ -117,6 +118,7 @@
   height: 350px;
   background-image: url("videoback.png");
   background-size: cover;
+  background-position: center;
 }
 
 #my-id {
