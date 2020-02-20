@@ -43,6 +43,7 @@
   .remote-video {
     width: 100%;
     height: 350px;
+    background-image: url("videoback.png");
   }
 
   #my-id {
