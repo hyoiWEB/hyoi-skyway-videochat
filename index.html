@@ -31,14 +31,13 @@
   		<img src="hyoi.png" alt="ロゴ">
   	</div>
   	<div id="slogan">
-  		<h2>We can go anywhere.</h2>
+  		<h2>hyoi online videochat</h2>
   	</div>
   </header>
 
 <div class="pure-g">
   <!-- Steps -->
   <div class="pure-u-1-3">
-    <h2>hyoi online videochat</h2>
 
     <div class="select">
       <label for="audioSource">マイク選択: </label><select id="audioSource"></select>
@@ -52,19 +51,19 @@
     <div id="step1">
       <p>カメラとマイクを[許可]してください。</p>
       <div id="step1-error">
-        <p>ウェブカメラとマイクにアクセス出来ませんでした。必ずhttpサーバー上で実行し、ブラウザーから許可を求められたら[許可]をクリックしてください。</p>
+        <p>ウェブカメラとマイクにアクセス出来ませんでした。<br>ブラウザーから許可を求められたら[許可]をクリックしてください。</p>
       </div>
     </div>
 
     <p>あなたのID: <span id="my-id">...</span></p>
     <!-- Make calls to others -->
     <div id="step2">
-      <h3>Roomに参加</h3>
+      <p><strong>Roomに参加</strong></p>
       <form id="make-call" class="pure-form">
         <input type="text" placeholder="Room名" id="join-room">
         <button class="pure-button pure-button-success" type="submit">参加</button>
       </form>
-      <p><strong>注意：</strong>簡単なRoom名にしてしまうと知らないグループに参加する恐れがあります。<br>また、ページ上にエラーが出た際は下の"このページを再読込します"ボタンを押すと、改善する場合が御座います。</p>
+      <p><strong>注意：</strong>簡単なRoom名にしてしまうと知らないグループに参加する恐れがあります。<br>エラーが出た際はこのページを再読込すると、改善する場合が御座います。</p>
       <input type="button" value="このページを再読込します" onclick="window.location.reload();" />
     </div>
     <!-- Call in progress -->
