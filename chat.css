@@ -19,12 +19,16 @@
   background: rgb(66, 184, 221); /* this is a light blue */
 }
 
+.pure-g {
+background-image: url("background.png");
+background-size: cover;
+background-position: center;
+}
+
 #video-container {
   width: 100%;
   height: 700px;
-  background-image: url("background.png");
-  background-size: cover;
-  background-position: center;
+  background-color: 343434;
 }
 
 .flex {
@@ -102,9 +106,7 @@
   #video-container {
     width: 100%;
     height: 700px;
-    background-image: url("background.png");
-    background-size: cover;
-    background-position: center;
+    background-color: 343434;
   }
 
   .flex {
