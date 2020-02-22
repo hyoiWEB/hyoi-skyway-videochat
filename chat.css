@@ -157,32 +157,29 @@ img{
 }
 
 #sendtextform {
-  width: 100%;
+  width: auto;
   height: auto;
   margin: 0px;
   position: absolute;
-	bottom: 0;
+	right: 10px;
+	left: 10px;
+	bottom: 10px;
 }
 
 #mymessage {
   width: 70%;
   height: auto;
-	margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+	margin: 3px;
 	box-sizing: border-box;
 }
 
 #sendbutton {
   width: auto;
   height: auto;
-  float:right;
-  margin-left: 0px;
-  margin-right: 15px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  float: right;
+	margin: 2px;
 	box-sizing: border-box;
+
 }
 
 .chatbox {
