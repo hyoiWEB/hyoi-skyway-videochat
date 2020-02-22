@@ -133,14 +133,14 @@ img{
   width: 50%;
   height: 350px;
   object-fit: cover;
-	padding: 5px;
+	padding: 10px;
 	box-sizing: border-box;
 }
 
 .remote-video {
   width: 100%;
   height: 450px;
-	padding: 5px;
+	padding: 10px;
 	box-sizing: border-box;
 }
 
@@ -152,7 +152,7 @@ img{
   width: 50%;
   height: 350px;
   position: relative;
-	padding: 5px;
+	padding: 10px;
 	box-sizing: border-box;
 }
 
@@ -167,7 +167,10 @@ img{
 #mymessage {
   width: 70%;
   height: auto;
-  margin: 3px;
+	margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 #sendbutton {
@@ -175,8 +178,8 @@ img{
   height: auto;
   float:right;
   margin-left: 0px;
-  margin-right: 10px;
-  margin-top: 3px;
+  margin-right: 15px;
+  margin-top: 5px;
   margin-bottom: 5px;
 }
 
