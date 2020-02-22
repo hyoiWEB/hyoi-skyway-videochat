@@ -169,8 +169,9 @@ img{
 #mymessage {
   width: 70%;
   height: auto;
-	min-width: 21px;
-	margin: 3px;
+	min-width: 22px;
+	margin-top: 3px;
+	margin-bottom: 2px;
 	box-sizing: border-box;
 }
 
@@ -178,7 +179,8 @@ img{
   width: auto;
   height: auto;
   float: right;
-	margin: 3px;
+	margin-top: 2px;
+	margin-bottom: 1px;
 	box-sizing: border-box;
 
 }
