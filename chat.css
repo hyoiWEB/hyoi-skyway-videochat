@@ -171,6 +171,7 @@ img{
   margin-right: 0px;
   margin-top: 5px;
   margin-bottom: 5px;
+	box-sizing: border-box;
 }
 
 #sendbutton {
@@ -181,11 +182,12 @@ img{
   margin-right: 15px;
   margin-top: 5px;
   margin-bottom: 5px;
+	box-sizing: border-box;
 }
 
 .chatbox {
   width: 100%;
-  height: 290px;
+  height: 270px;
   overflow: scroll;
   background-color: #ffffff;
   padding: 10px;
