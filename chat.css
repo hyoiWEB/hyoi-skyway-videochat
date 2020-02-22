@@ -169,20 +169,13 @@ img{
 #mymessage {
   width: 70%;
   height: auto;
-	min-width: 22px;
-	margin-top: 3px;
-	margin-bottom: 2px;
-	box-sizing: border-box;
+	min-height: : 22px;
 }
 
 #sendbutton {
   width: auto;
   height: auto;
   float: right;
-	margin-top: 2px;
-	margin-bottom: 1px;
-	box-sizing: border-box;
-
 }
 
 .chatbox {
