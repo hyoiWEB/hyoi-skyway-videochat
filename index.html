@@ -8,9 +8,9 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="heading">P2P Media example</h1>
+      <h1 class="heading">P2P Video Webside</h1>
       <p class="note">
-        Enter remote peer ID to call.
+        相手のPeerIDを入力して下さい。
       </p>
       <div class="p2p-media">
         <div class="remote-stream">
@@ -18,13 +18,12 @@
         </div>
         <div class="local-stream">
           <video id="js-local-stream"></video>
-          <p>Your ID: <span id="js-local-id"></span></p>
-          <input type="text" placeholder="Remote Peer ID" id="js-remote-id">
+          <p>あなたのIDは: <span id="js-local-id"></span></p>
+          <input type="text" placeholder="Peer ID" id="js-remote-id">
           <button id="js-call-trigger">Call</button>
           <button id="js-close-trigger">Close</button>
         </div>
       </div>
-      <p class="meta" id="js-meta"></p>
     </div>
     <script src="//cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
     <script src="key.js"></script>
