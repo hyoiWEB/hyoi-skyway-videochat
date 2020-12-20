@@ -38,6 +38,7 @@ const Peer = window.Peer;
     }
 
     const mediaConnection = peer.call(remoteId.value, localStream);
+    const dataConnection = peer.connect(remoteId.value);
 
     mediaConnection.on('stream', async stream => {
       // Render remote stream for caller
