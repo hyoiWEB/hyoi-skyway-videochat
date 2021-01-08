@@ -24,9 +24,7 @@ const Peer = window.Peer;
   localVideo.playsInline = true;
   await localVideo.play().catch(console.error);
 
-  let PeerID = ['abc','def','ghi']
-
-  const peer = new Peer(PeerID,{
+  const peer = new Peer("hyoi"||"abc"||"def",{
     key: window.__SKYWAY_KEY__,
     debug: 3,
   });
