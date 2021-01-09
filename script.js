@@ -24,11 +24,23 @@ const Peer = window.Peer;
   localVideo.playsInline = true;
   await localVideo.play().catch(console.error);
 
-  const peer = new Peer("hyoi"||"abc"||"def",{
+  const peer = new Peer("abc",{
     key: window.__SKYWAY_KEY__,
     debug: 3,
   });
 
+  const peer2 = new Peer("def",{
+    key: window.__SKYWAY_KEY__,
+    debug: 3,
+  });
+
+  const peer3 = new Peer("ghi",{
+    key: window.__SKYWAY_KEY__,
+    debug: 3,
+  });
+
+
+//peer
   // Register caller handler
   callTrigger.addEventListener('click', () => {
     // Note that you need to ensure the peer has connected to signaling server
@@ -77,4 +89,108 @@ const Peer = window.Peer;
   });
 
   peer.on('error', console.error);
+
+
+//peer2
+  // Register caller handler
+  callTrigger.addEventListener('click', () => {
+    // Note that you need to ensure the peer has connected to signaling server
+    // before using methods of peer instance.
+    if (!peer2.open) {
+      return;
+    }
+
+    const mediaConnection = peer2.call(remoteId.value, localStream);
+    const dataConnection = peer2.connect(remoteId.value);
+
+    mediaConnection.on('stream', async stream => {
+      // Render remote stream for caller
+      remoteVideo.srcObject = stream;
+      remoteVideo.playsInline = true;
+      await remoteVideo.play().catch(console.error);
+    });
+
+    mediaConnection.once('close', () => {
+      remoteVideo.srcObject.getTracks().forEach(track => track.stop());
+      remoteVideo.srcObject = null;
+    });
+
+    closeTrigger.addEventListener('click', () => mediaConnection.close(true));
+  });
+
+  peer2.once('open', id => (localId.textContent = id));
+
+  // Register callee handler
+  peer2.on('call', mediaConnection => {
+    mediaConnection.answer(localStream);
+
+    mediaConnection.on('stream', async stream => {
+      // Render remote stream for callee
+      remoteVideo.srcObject = stream;
+      remoteVideo.playsInline = true;
+      await remoteVideo.play().catch(console.error);
+    });
+
+    mediaConnection.once('close', () => {
+      remoteVideo.srcObject.getTracks().forEach(track => track.stop());
+      remoteVideo.srcObject = null;
+    });
+
+    closeTrigger.addEventListener('click', () => mediaConnection.close(true));
+  });
+
+  peer2.on('error', console.error);
+
+
+//peer3
+  // Register caller handler
+  callTrigger.addEventListener('click', () => {
+    // Note that you need to ensure the peer has connected to signaling server
+    // before using methods of peer instance.
+    if (!peer3.open) {
+      return;
+    }
+
+    const mediaConnection = peer3.call(remoteId.value, localStream);
+    const dataConnection = peer3.connect(remoteId.value);
+
+    mediaConnection.on('stream', async stream => {
+      // Render remote stream for caller
+      remoteVideo.srcObject = stream;
+      remoteVideo.playsInline = true;
+      await remoteVideo.play().catch(console.error);
+    });
+
+    mediaConnection.once('close', () => {
+      remoteVideo.srcObject.getTracks().forEach(track => track.stop());
+      remoteVideo.srcObject = null;
+    });
+
+    closeTrigger.addEventListener('click', () => mediaConnection.close(true));
+  });
+
+  peer3.once('open', id => (localId.textContent = id));
+
+  // Register callee handler
+  peer3.on('call', mediaConnection => {
+    mediaConnection.answer(localStream);
+
+    mediaConnection.on('stream', async stream => {
+      // Render remote stream for callee
+      remoteVideo.srcObject = stream;
+      remoteVideo.playsInline = true;
+      await remoteVideo.play().catch(console.error);
+    });
+
+    mediaConnection.once('close', () => {
+      remoteVideo.srcObject.getTracks().forEach(track => track.stop());
+      remoteVideo.srcObject = null;
+    });
+
+    closeTrigger.addEventListener('click', () => mediaConnection.close(true));
+  });
+
+  peer3.on('error', console.error);
+
+
 })();
