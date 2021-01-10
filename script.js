@@ -69,6 +69,7 @@ const Peer = window.Peer;
     closeTrigger.addEventListener('click', () => mediaConnection.close(true));
   });
 
+  //htmlのjs-local-idに追加
   peer.once('open', id => (localId.textContent = id));
 
   // Register callee handler
@@ -94,32 +95,9 @@ const Peer = window.Peer;
 
 
 //peer2
-  // Register caller handler
-  callTrigger.addEventListener('click', () => {
-    // Note that you need to ensure the peer has connected to signaling server
-    // before using methods of peer instance.
-    if (!peer2.open) {
-      return;
-    }
 
-    const mediaConnection = peer2.call(remoteId.value, localStream);
-    const dataConnection = peer2.connect(remoteId.value);
 
-    mediaConnection.on('stream', async stream => {
-      // Render remote stream for caller
-      remoteVideo.srcObject = stream;
-      remoteVideo.playsInline = true;
-      await remoteVideo.play().catch(console.error);
-    });
-
-    mediaConnection.once('close', () => {
-      remoteVideo.srcObject.getTracks().forEach(track => track.stop());
-      remoteVideo.srcObject = null;
-    });
-
-    closeTrigger.addEventListener('click', () => mediaConnection.close(true));
-  });
-
+  //htmlのjs-local-id2に追加
   peer2.once('open', id => (localId2.textContent = id));
 
   // Register callee handler
@@ -145,32 +123,9 @@ const Peer = window.Peer;
 
 
 //peer3
-  // Register caller handler
-  callTrigger.addEventListener('click', () => {
-    // Note that you need to ensure the peer has connected to signaling server
-    // before using methods of peer instance.
-    if (!peer3.open) {
-      return;
-    }
 
-    const mediaConnection = peer3.call(remoteId.value, localStream);
-    const dataConnection = peer3.connect(remoteId.value);
 
-    mediaConnection.on('stream', async stream => {
-      // Render remote stream for caller
-      remoteVideo.srcObject = stream;
-      remoteVideo.playsInline = true;
-      await remoteVideo.play().catch(console.error);
-    });
-
-    mediaConnection.once('close', () => {
-      remoteVideo.srcObject.getTracks().forEach(track => track.stop());
-      remoteVideo.srcObject = null;
-    });
-
-    closeTrigger.addEventListener('click', () => mediaConnection.close(true));
-  });
-
+  //htmlのjs-local-id3に追加
   peer3.once('open', id => (localId3.textContent = id));
 
   // Register callee handler
