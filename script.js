@@ -42,8 +42,7 @@ const Peer = window.Peer;
   });
 
 
-//peer
-  // Register caller handler
+  // 電話をかける
   callTrigger.addEventListener('click', () => {
     // Note that you need to ensure the peer has connected to signaling server
     // before using methods of peer instance.
@@ -71,8 +70,13 @@ const Peer = window.Peer;
 
   //htmlのjs-local-idに追加
   peer.once('open', id => (localId.textContent = id));
+  //htmlのjs-local-id2に追加
+  peer2.once('open', id => (localId2.textContent = id));
+  //htmlのjs-local-id3に追加
+  peer3.once('open', id => (localId3.textContent = id));
 
-  // Register callee handler
+  //peer1
+  // peer1の電話を受け取る
   peer.on('call', mediaConnection => {
     mediaConnection.answer(localStream);
 
@@ -93,14 +97,8 @@ const Peer = window.Peer;
 
   peer.on('error', console.error);
 
-
-//peer2
-
-
-  //htmlのjs-local-id2に追加
-  peer2.once('open', id => (localId2.textContent = id));
-
-  // Register callee handler
+  //peer2
+  // peer2の電話を受け取る
   peer2.on('call', mediaConnection => {
     mediaConnection.answer(localStream);
 
@@ -121,14 +119,8 @@ const Peer = window.Peer;
 
   peer2.on('error', console.error);
 
-
-//peer3
-
-
-  //htmlのjs-local-id3に追加
-  peer3.once('open', id => (localId3.textContent = id));
-
-  // Register callee handler
+  //peer3
+  // peer3の電話を受け取る
   peer3.on('call', mediaConnection => {
     mediaConnection.answer(localStream);
 
