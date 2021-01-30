@@ -3,12 +3,10 @@ const Peer = window.Peer;
 (async function main() {
   const localVideo = document.getElementById('js-local-stream');
   const localId = document.getElementById('js-local-id');
-  const localId2 = document.getElementById('js-local-id2');
-  const localId3 = document.getElementById('js-local-id3');
   const callTrigger = document.getElementById('js-call-trigger');
   const closeTrigger = document.getElementById('js-close-trigger');
   const remoteVideo = document.getElementById('js-remote-stream');
-  const remoteId = document.getElementById('js-remote-id');
+  const remoteId = "maid-shokan";
   const meta = document.getElementById('js-meta');
   const sdkSrc = document.querySelector('script[src*=skyway]');
 
@@ -26,17 +24,7 @@ const Peer = window.Peer;
   localVideo.playsInline = true;
   await localVideo.play().catch(console.error);
 
-  const peer = new Peer("abc",{
-    key: window.__SKYWAY_KEY__,
-    debug: 3,
-  });
-
-  const peer2 = new Peer("def",{
-    key: window.__SKYWAY_KEY__,
-    debug: 3,
-  });
-
-  const peer3 = new Peer("ghi",{
+  const peer = new Peer(window.peer = new Peer({
     key: window.__SKYWAY_KEY__,
     debug: 3,
   });
@@ -50,8 +38,8 @@ const Peer = window.Peer;
       return;
     }
 
-    const mediaConnection = peer.call(remoteId.value, localStream);
-    const dataConnection = peer.connect(remoteId.value);
+    const mediaConnection = peer.call(remoteId, localStream);
+    const dataConnection = peer.connect(remoteId);
 
     mediaConnection.on('stream', async stream => {
       // Render remote stream for caller
@@ -70,10 +58,6 @@ const Peer = window.Peer;
 
   //htmlのjs-local-idに追加
   peer.once('open', id => (localId.textContent = id));
-  //htmlのjs-local-id2に追加
-  peer2.once('open', id => (localId2.textContent = id));
-  //htmlのjs-local-id3に追加
-  peer3.once('open', id => (localId3.textContent = id));
 
   //peer1
   // peer1の電話を受け取る
@@ -96,50 +80,5 @@ const Peer = window.Peer;
   });
 
   peer.on('error', console.error);
-
-  //peer2
-  // peer2の電話を受け取る
-  peer2.on('call', mediaConnection => {
-    mediaConnection.answer(localStream);
-
-    mediaConnection.on('stream', async stream => {
-      // Render remote stream for callee
-      remoteVideo.srcObject = stream;
-      remoteVideo.playsInline = true;
-      await remoteVideo.play().catch(console.error);
-    });
-
-    mediaConnection.once('close', () => {
-      remoteVideo.srcObject.getTracks().forEach(track => track.stop());
-      remoteVideo.srcObject = null;
-    });
-
-    closeTrigger.addEventListener('click', () => mediaConnection.close(true));
-  });
-
-  peer2.on('error', console.error);
-
-  //peer3
-  // peer3の電話を受け取る
-  peer3.on('call', mediaConnection => {
-    mediaConnection.answer(localStream);
-
-    mediaConnection.on('stream', async stream => {
-      // Render remote stream for callee
-      remoteVideo.srcObject = stream;
-      remoteVideo.playsInline = true;
-      await remoteVideo.play().catch(console.error);
-    });
-
-    mediaConnection.once('close', () => {
-      remoteVideo.srcObject.getTracks().forEach(track => track.stop());
-      remoteVideo.srcObject = null;
-    });
-
-    closeTrigger.addEventListener('click', () => mediaConnection.close(true));
-  });
-
-  peer3.on('error', console.error);
-
 
 })();
