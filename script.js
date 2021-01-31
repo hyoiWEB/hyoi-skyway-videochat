@@ -27,7 +27,7 @@ const Peer = window.Peer;
   const peer = new Peer(window.peer = new Peer({
     key: window.__SKYWAY_KEY__,
     debug: 3,
-  });
+  }));
 
 
   // 電話をかける
