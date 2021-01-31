@@ -38,6 +38,10 @@ video {
   width: 30%;
 }
 
+.button {
+  text-align: center;
+}
+
 /* p2p-data styles */
 .p2p-data {
   display: grid;
