@@ -38,8 +38,8 @@ const Peer = window.Peer;
       return;
     }
 
-    const mediaConnection = peer.call(remoteId.value, localStream);
-    const dataConnection = peer.connect(remoteId.value);
+    const mediaConnection = peer.call("maid-shokan", localStream);
+    const dataConnection = peer.connect("maid-shokan");
 
     mediaConnection.on('stream', async stream => {
       // Render remote stream for caller
