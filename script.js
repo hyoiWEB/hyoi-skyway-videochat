@@ -56,7 +56,7 @@ const Peer = window.Peer;
   });
 
   //htmlのjs-local-idに追加
-  peer.once('open', id => (localId.textContent = id));
+  //peer.once('open', id => (localId.textContent = id));
 
   //peer1
   // peer1の電話を受け取る
